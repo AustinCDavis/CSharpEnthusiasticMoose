@@ -1,7 +1,23 @@
 ﻿using System;
 
-Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
-Console.WriteLine("--------------------------------------------");
+Main();
+
+void Main()
+{
+    Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
+    Console.WriteLine("--------------------------------------------");
+    Console.WriteLine();
+
+    // Let the moose speak!
+    MooseSays("H I, I'M  E N T H U S I A S T I C !");
+    MooseSays("I really am enthusiastic");
+
+    // As a question
+    CanadaQuestion();
+    EnthusiasticQuestion();
+    CSharpChallengeQuestion();
+    SecretQuestion();
+}
 
 bool MooseAsks(string question)
 {
@@ -55,17 +71,6 @@ void MooseSays( string message)
                        `^^` `^^^`
     ");
 }
-
-// Let the moose speak!
-MooseSays("H I, I'M  E N T H U S I A S T I C !");
-MooseSays("And I have a question for you!!");
-
-//Type question function here
-CanadaQuestion();
-EnthusiasticQuestion();
-SecretQuestion();
-CSharpChallengeQuestion();
-
 
 //List of questions function
 void CanadaQuestion()
