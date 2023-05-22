@@ -64,9 +64,11 @@ MooseSays("I really am enthusiastic");
 bool isTrue = MooseAsks("Is Canada real?");
 if (isTrue)
 {
+    //calling moosesays function with response to questin being true
     MooseSays("Really? It seems very unlikely.");
 }
 else
 {
+    //calling moosesays function with response to questin being false
     MooseSays("I  K N E W  I T !!!");
 }
