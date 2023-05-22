@@ -58,17 +58,61 @@ void MooseSays( string message)
 
 // Let the moose speak!
 MooseSays("H I, I'M  E N T H U S I A S T I C !");
-MooseSays("I really am enthusiastic");
+MooseSays("And I have a question for you!!");
 
-// As a question
-bool isTrue = MooseAsks("Is Canada real?");
-if (isTrue)
+//Type question function here
+CSharpChallengeQuestion();
+
+
+//List of questions function
+void CanadaQuestion()
 {
-    //calling moosesays function with response to questin being true
-    MooseSays("Really? It seems very unlikely.");
+    bool isTrue = MooseAsks("Is Canada real?");
+    if (isTrue)
+    {
+        MooseSays("Really? It seems very unlikely.");
+    }
+    else
+    {
+        MooseSays("I  K N E W  I T !!!");
+    }
 }
-else
+
+void EnthusiasticQuestion()
 {
-    //calling moosesays function with response to questin being false
-    MooseSays("I  K N E W  I T !!!");
+    bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
+    if (isEnthusiastic)
+    {
+        MooseSays("Yay!");
+    }
+    else
+    {
+        MooseSays("You should try it!");
+    }
+}
+
+void CSharpChallengeQuestion()
+{
+    bool challengeCSharp = MooseAsks("Do you think C# is a challenge?");
+    if (challengeCSharp)
+    {
+        MooseSays("Good job sucking up to your instructor!");
+    }
+    else
+    {
+        MooseSays("You will...oh, yes, you will...");
+    }
+}
+
+void SecretQuestion()
+{
+    bool wantsSecret = MooseAsks("Do you want to know a secret?");
+    if (wantsSecret)
+    {
+        MooseSays("ME TOO!!!! I love secrets...tell me one!");
+    }
+    else
+    {
+        MooseSays("Oh, no...secrets are the best, I love to share them!");
+    }
 }
