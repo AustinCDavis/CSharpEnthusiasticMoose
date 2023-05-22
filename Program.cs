@@ -61,6 +61,9 @@ MooseSays("H I, I'M  E N T H U S I A S T I C !");
 MooseSays("And I have a question for you!!");
 
 //Type question function here
+CanadaQuestion();
+EnthusiasticQuestion();
+SecretQuestion();
 CSharpChallengeQuestion();
 
 
