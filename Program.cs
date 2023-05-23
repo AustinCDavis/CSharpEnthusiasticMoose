@@ -19,14 +19,6 @@ void Main()
     SecretQuestion();
 }
 
-void AskQuestion(string question, string yResponse, string nResponse)
-{
-    bool isTrue = MooseAsks(question);
-
-    string response = isTrue ? yResponse : nResponse;
-    MooseSays(response);
-}
-
 bool MooseAsks(string question)
 {
     Console.Write($"{question} (Y/N): ");
@@ -47,6 +39,15 @@ bool MooseAsks(string question)
         return false;
     }
 }
+
+void AskQuestion(string question, string yResponse, string nResponse)
+{
+    bool isTrue = MooseAsks(question);
+
+    string response = isTrue ? yResponse : nResponse;
+    MooseSays(response);
+}
+
 
 void MooseSays( string message)
 {
@@ -81,6 +82,7 @@ void MooseSays( string message)
 }
 
 //List of questions function
+//calling Ask question function with ternary format of (question, yresponse, nresponse)
 void CanadaQuestion()
 {
     AskQuestion("Is Canada real?", "Really? It seems very unlikely.", "I  K N E W  I T !!!");
