@@ -19,6 +19,14 @@ void Main()
     SecretQuestion();
 }
 
+void AskQuestion(string question, string yResponse, string nResponse)
+{
+    bool isTrue = MooseAsks(question);
+
+    string response = isTrue ? yResponse : nResponse;
+    MooseSays(response);
+}
+
 bool MooseAsks(string question)
 {
     Console.Write($"{question} (Y/N): ");
@@ -75,52 +83,20 @@ void MooseSays( string message)
 //List of questions function
 void CanadaQuestion()
 {
-    bool isTrue = MooseAsks("Is Canada real?");
-    if (isTrue)
-    {
-        MooseSays("Really? It seems very unlikely.");
-    }
-    else
-    {
-        MooseSays("I  K N E W  I T !!!");
-    }
+    AskQuestion("Is Canada real?", "Really? It seems very unlikely.", "I  K N E W  I T !!!");
 }
 
 void EnthusiasticQuestion()
 {
-    bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
-    if (isEnthusiastic)
-    {
-        MooseSays("Yay!");
-    }
-    else
-    {
-        MooseSays("You should try it!");
-    }
+    AskQuestion("Are you enthusiastic?", "Yay!", "You should try it!");
 }
 
 void CSharpChallengeQuestion()
 {
-    bool challengeCSharp = MooseAsks("Do you think C# is a challenge?");
-    if (challengeCSharp)
-    {
-        MooseSays("Good job sucking up to your instructor!");
-    }
-    else
-    {
-        MooseSays("You will...oh, yes, you will...");
-    }
+    AskQuestion("Do you think C# is a challenge?", "Good job sucking up to your instructor!", "You will...oh, yes, you will...");
 }
 
 void SecretQuestion()
 {
-    bool wantsSecret = MooseAsks("Do you want to know a secret?");
-    if (wantsSecret)
-    {
-        MooseSays("ME TOO!!!! I love secrets...tell me one!");
-    }
-    else
-    {
-        MooseSays("Oh, no...secrets are the best, I love to share them!");
-    }
+    AskQuestion("Do you want to know a secret?", "ME TOO!!!! I love secrets...tell me one!", "Oh, no...secrets are the best, I love to share them!");
 }
